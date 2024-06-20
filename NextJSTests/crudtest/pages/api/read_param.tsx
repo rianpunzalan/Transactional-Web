@@ -18,7 +18,9 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
             //.find({"_id": new ObjectId(id),"name":name}) // has more than 1 filters
             .limit(10)
             .toArray();
-
+           
+                console.log(users.length);
+      
         res.json(users);
     } catch (e) {
         console.error(e);
